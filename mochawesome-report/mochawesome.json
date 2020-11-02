@@ -1,0 +1,138 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-11-02T06:02:31.361Z",
+    "end": "2020-11-02T06:02:43.912Z",
+    "duration": 12551,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "19d3b6ae-4286-4986-99c7-0ad74dcadd65",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ae7cefab-0fe2-4214-bf06-1243278bd422",
+          "title": "Create Android session",
+          "fullFile": "D:\\PycharmProjects\\laoNanHaipythonProject1\\front\\myappiumjswebdriverio\\test\\basic\\android-create-session.test.js",
+          "file": "\\test\\basic\\android-create-session.test.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook in \"Create Android session\"",
+              "fullTitle": "Create Android session \"before all\" hook in \"Create Android session\"",
+              "timedOut": false,
+              "duration": 7833,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "client = await webdriverio.remote(androidOptions);",
+              "err": {},
+              "uuid": "2b679f07-85de-406f-81cc-b2b7b84a9215",
+              "parentUUID": "ae7cefab-0fe2-4214-bf06-1243278bd422",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should create and destroy a session",
+              "fullTitle": "Create Android session should create and destroy a session",
+              "timedOut": false,
+              "duration": 710,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const res = await client.status();\nassert.isObject(res.build);\nconst current_package = await client.getCurrentPackage();\nassert.equal(current_package, 'io.appium.android.apis');\nconst delete_session = await client.deleteSession();\nassert.isNull(delete_session);",
+              "err": {},
+              "uuid": "2bac880a-a2f0-470b-ac67-5a5d4c455c63",
+              "parentUUID": "ae7cefab-0fe2-4214-bf06-1243278bd422",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "测试应该5000毫秒后结束",
+              "fullTitle": "Create Android session 测试应该5000毫秒后结束",
+              "timedOut": false,
+              "duration": 4001,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var x = true;\nvar f = function() {\n    x = false;\n    assert.equal(x,false,'我是message');\n    done(); // 通知Mocha测试结束\n};\nsetTimeout(f, 4000);",
+              "err": {},
+              "uuid": "218f95c4-8f01-4041-9486-f5972cbe7afc",
+              "parentUUID": "ae7cefab-0fe2-4214-bf06-1243278bd422",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "2bac880a-a2f0-470b-ac67-5a5d4c455c63",
+            "218f95c4-8f01-4041-9486-f5972cbe7afc"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4711,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 1800000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 1800000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "8.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.0"
+    },
+    "marge": {
+      "options": null,
+      "version": "5.1.0"
+    }
+  }
+}

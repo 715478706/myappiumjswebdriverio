@@ -9,7 +9,9 @@
 
 * To run all of the tests, run `npm test`
 * To run individual tests, run `$(npm bin)/mocha test/path/to/test.js`
-
+npm install mocha
+npm install mochawesome
+$(npm bin)/mocha --timeout 1800000 --reporter mochawesome test/basic/android-create-session.test.js
 ## Troubleshooting
 
 * ```Original error: '12.1' does not exist in the list of simctl SDKs. Only the following Simulator SDK versions are available on your system: x.y```
