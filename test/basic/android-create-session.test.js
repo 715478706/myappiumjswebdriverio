@@ -1,4 +1,5 @@
 const webdriverio = require('webdriverio');
+var fetch = require('node-fetch');
 const androidOptions = require('../../helpers/caps').androidOptions;
 const app = require('../../helpers/apps').androidApiDemos;
 const assert = require('chai').assert;
@@ -30,5 +31,10 @@ describe('Create Android session', function () {
             done(); // 通知Mocha测试结束
         };
         setTimeout(f, 4000);
+    });
+    it('异步请求应该返回一个对象', async function() {
+        let response = await fetch('https://www.baidu.com/');
+        let html = await response.text();
+        console.log(html)
     });
 });
